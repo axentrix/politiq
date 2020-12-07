@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.582" height="30.444" viewBox="0 0 31.582 30.444">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.504" x2="1" y2="0.496" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fa880f"/>
+      <stop offset="1" stop-color="#dc3f18"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.505" x2="1" y2="0.495" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#392e1a"/>
+      <stop offset="1" stop-color="#dc3f18"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.318" y1="0.301" x2="1.796" y2="0.301" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-5" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="0.09" y1="0.468" x2="1.138" y2="0.468" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-7" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d36e21"/>
+      <stop offset="1" stop-color="#dc3f18"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-9" x1="0.044" y1="0.533" x2="1.092" y2="0.533" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="Component_15_1" data-name="Component 15 – 1" transform="translate(0.707)">
+    <rect id="Rectangle_72" data-name="Rectangle 72" width="12.891" height="2.532" rx="1.266" transform="translate(4.985 23.172)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_73" data-name="Rectangle 73" width="14.948" height="2.532" rx="1.266" transform="translate(3.957 25.615)" fill="url(#linear-gradient-2)"/>
+    <g id="Group_140" data-name="Group 140" transform="translate(0.431 15.442) rotate(-45)">
+      <g id="Rectangle_63" data-name="Rectangle 63" transform="translate(10.712 10.459)">
+        <path id="Path_111" data-name="Path 111" d="M1300.917,944.926l-8.216-7.782a1.433,1.433,0,0,0-2.058-.043h0a1.511,1.511,0,0,0-.034,2.1l8.216,7.782a1.433,1.433,0,0,0,2.058.043h0A1.511,1.511,0,0,0,1300.917,944.926Z" transform="translate(-1290.2 -936.687)" fill="url(#linear-gradient-3)"/>
+      </g>
+      <path id="Rectangle_62" data-name="Rectangle 62" d="M1254.806,897.648l-.275-.285h0l-4.341,4.184h0l.275.285a2.188,2.188,0,0,0,3.094.057l1.19-1.147A2.188,2.188,0,0,0,1254.806,897.648Z" transform="translate(-1242.093 -889.473)" fill="url(#linear-gradient-4)"/>
+      <g id="Rectangle_60" data-name="Rectangle 60" transform="translate(1.049 0.8)">
+        <path id="Path_112" data-name="Path 112" d="M1156.964,794.022l-5-5.156-9.638,9.29,5,5.157Z" transform="translate(-1142.328 -788.866)" fill="url(#linear-gradient-5)"/>
+      </g>
+      <g id="Rectangle_61" data-name="Rectangle 61" transform="translate(8.135)">
+        <path id="Path_113" data-name="Path 113" d="M1258.337,782.213l-5.058-5.154a1.479,1.479,0,0,0-2.065-.035h0a1.416,1.416,0,0,0-.041,2.028l5.058,5.154a1.479,1.479,0,0,0,2.065.034h0A1.416,1.416,0,0,0,1258.337,782.213Z" transform="translate(-1250.766 -776.622)" fill="url(#linear-gradient-6)"/>
+      </g>
+      <g id="Group_139" data-name="Group 139" transform="translate(4.159 6.12)">
+        <g id="Group_137" data-name="Group 137" transform="translate(0.457 0.457)">
+          <line id="Line_22" data-name="Line 22" y1="6.161" x2="6.161" fill="#d36e21"/>
+        </g>
+        <g id="Group_138" data-name="Group 138">
+          <path id="Path_114" data-name="Path 114" d="M1175.071,877.363a.457.457,0,0,1-.323-.781l6.161-6.161a.457.457,0,0,1,.647.647l-6.161,6.161A.456.456,0,0,1,1175.071,877.363Z" transform="translate(-1174.614 -870.288)" fill="url(#linear-gradient-7)"/>
+        </g>
+      </g>
+      <g id="Group_142" data-name="Group 142" transform="translate(3.159 4.12)">
+        <g id="Group_137-2" data-name="Group 137" transform="translate(0.457 0.457)">
+          <line id="Line_22-2" data-name="Line 22" y1="6.161" x2="6.161" fill="#d36e21"/>
+        </g>
+        <g id="Group_138-2" data-name="Group 138">
+          <path id="Path_114-2" data-name="Path 114" d="M1175.071,877.363a.457.457,0,0,1-.323-.781l4.161-4.161a.457.457,0,0,1,.647.647l-4.161,4.161A.456.456,0,0,1,1175.071,877.363Z" transform="translate(-1174.614 -870.288)" fill="url(#linear-gradient-7)"/>
+        </g>
+      </g>
+      <g id="Rectangle_61-2" data-name="Rectangle 61" transform="translate(0 8.135)">
+        <path id="Path_115" data-name="Path 115" d="M1133.839,906.711l-5.058-5.154a1.479,1.479,0,0,0-2.065-.035h0a1.416,1.416,0,0,0-.041,2.028l5.058,5.154a1.479,1.479,0,0,0,2.065.034h0A1.416,1.416,0,0,0,1133.839,906.711Z" transform="translate(-1126.268 -901.12)" fill="url(#linear-gradient-9)"/>
+      </g>
+    </g>
+    <line id="Line_24" data-name="Line 24" x1="2.019" y2="2.019" transform="translate(20.742 19.434)" fill="none" stroke="#d0d8e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_25" data-name="Line 25" x2="2.019" y2="2.019" transform="translate(0 19.434)" fill="none" stroke="#d0d8e6" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
