@@ -186,24 +186,34 @@
 
 
                                     <!--context menu-->
-                                    <div class="contextactions_box">
-                                        <a href="" class="contextactions_link">
-                                            <img src="images/svg-icons/contextactions.svg" />
-                                        </a>
 
 
-                                        <div class="Emojis">
-                                            <div class="Emoji Emoji--vulgar">
-                                                <img src="images/svg-icons/vulgar.svg" />
-                                            </div>
-                                            <div class="Emoji Emoji--irrelevant">
-                                                <img src="images/svg-icons/irrelevant.svg" />
-                                            </div>
-                                            <div class="Emoji Emoji--dislike">
-                                                <img src="images/svg-icons/dislike.svg" />
-                                            </div>
+                                    <div class="facebook-reaction">
+                                        <!-- container div for reaction system -->
+                                        <span class="like-btn btn ">
+                                            <!-- Default like button -->
+                                         
+                                            <span class="like-btn-text">Abuse?</span> <!-- Default like button text,(Like, wow, sad..) default:Like  -->
+                                            <ul class="reactions-box">
+                                                <!-- Reaction buttons container-->
+                                                <li class="reaction reaction-vulgar" data-reaction="Vulgar"></li>
+                                                <li class="reaction reaction-irrelevant" data-reaction="Irrelevant"></li>
+                                                <li class="reaction reaction-dislike" data-reaction="Dislike"></li>
+                                              
+                                            </ul>
+                                        </span>
+                                        <div class="like-stat">
+                                            <!-- Like statistic container-->
+                                            <span class="like-emo">
+                                                <!-- like emotions container -->
+                                                <span class="like-btn-dislike"></span> <!-- given emotions like, wow, sad (default:Like) -->
+                                            </span> <span class="like-details">Anna Notovska and 1k others</span>
                                         </div>
                                     </div>
+
+
+
+                                    
                                     <div class="authorimage">
                                         <a href="#"><img src="images/avatar1.jpg" width="50" height="50" class="img-circle" alt="" /></a>
                                     </div>
@@ -800,11 +810,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
     <script> 
         $(document).ready(function () {
+
+
+            'use strict';
+            $(".like-emo").html('<span class="like-btn-hammer"></span><span class= "like-btn-dislike" ></span >');
+            var a = 0;
+            var b = 0;
+            var c = 1;
+            $(".reaction").on("click", function () {   // like click
+                var data_reaction = $(this).attr("data-reaction");
+                $(".like-details").html("You, Anna Notovska and 1k others");
+               
+                //$(".like-btn-emo").removeClass().addClass('like-btn-emo').addClass('like-btn-' + data_reaction.toLowerCase());
+               // $(".like-btn-text").text(data_reaction).removeClass().addClass('like-btn-text').addClass('like-btn-text-' + data_reaction.toLowerCase()).addClass("active");
+
+              
+              
+
+                if (data_reaction === "Vulgar") {
+                    
+                    if (a < 1) {
+                        a = 1;
+                        $(".like-emo").append('<span class="like-btn-vulgar"></span>');
+                    }
+                }
+                else if (data_reaction === "Irrelevant") {
+                    if (b < 1) {
+                        b = 1;
+                        $(".like-emo").append('<span class="like-btn-irrelevant"></span>');
+                    }
+                }
+                else if (data_reaction === "Dislike") {
+
+                    if (c < 1) {
+                        c = 1;
+                        $(".like-emo").append('<span class="like-btn-dislike"></span>');
+                    }
+                }
+
+
+              
+               
+            });
+            $(".like-btn-text").on("click", function () { // undo like click
+               
+                if ($(this).hasClass("active")) {
+                    $(".like-btn-text").text("Like").removeClass().addClass('like-btn-text');
+                    $(".like-btn-emo").removeClass().addClass('like-btn-emo').addClass("like-btn-default");
+                    $(".like-emo").html('<span class="like-btn-vulgar"></span>');
+                    $(".like-details").html("Anna Notovska and 1k others");
+
+                }
+            });  
+
+
             $(".addtagsdiv").val();
             $('[data-toggle="tooltip"]').tooltip();
 
             var $element = $('input[type="range"]');
             var $output = $('output');
+            var $buttonvalue = $(".buttonvalue");
+
 
             function updateOutput(el, val) {
                 el.textContent = val;
@@ -814,11 +880,34 @@
                
                     polyfill: false,
                    onInit: function () {
-        this.output = $($("output")[i]).html(this.$element.val());
+                       this.output = $($("output")[i]).html(this.$element.val());
+                      this.buttonvalue = $($element.parent().prev(".buttonvalue")[i]).html(this.$element.val());
+                      
+                       if (this.$element.val() == 0) {
+                        
+                           $($element.parent().prev(".buttonvalue")[i]).html('<span class="post-rating neutral">' + "no rating" + "</span>");
+
+                       }
+
+
     },
     onSlide: function (
         position, value) {
         this.output.html(value);
+
+        if (value == 0) {
+            this.buttonvalue.html('<span class="post-rating neutral">' + "no rating" + "</span>");
+
+        }
+        else if ((value == -1) || (value == -2)) {
+            this.buttonvalue.html('<span class="post-rating bad">' + value + "</span>");
+
+        }
+        else if ((value == 1) || (value == 2)) {
+            this.buttonvalue.html('<span class="post-rating good">' + value + "</span>");
+
+        }
+       
     }
 }));
             function updateTextInput(thename) {
@@ -859,21 +948,7 @@
         });
 
 
-        'use strict';
-        (function () {
-            var likeLink = document.querySelector('.contextactions_link');
-            likeLink.addEventListener('click mouseenter', function (e) {
-                likeLink.classList.remove('js-hover');
-
-                e.preventDefault();
-            });
-            setTimeout(function () {
-                likeLink.classList.remove('js-hover');
-               
-            }, 5000);
-           
-        }());
-     
+       
     </script>
 
 

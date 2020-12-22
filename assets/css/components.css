@@ -1,4 +1,4 @@
-@import url('vugofont/stylesheet.css');
+@import url('Poppinsfont/stylesheet.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Caveat');
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
@@ -73,7 +73,7 @@ File: Components
 }
 /* Tooltips */
 .tooltip {
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .tooltip .tooltip-inner {
   padding: 4px 10px;
@@ -127,7 +127,7 @@ File: Components
   font-size: 16px;
   padding: 12px 24px;
   outline: none !important;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .btn-mini {
   /*background:@white !important;
@@ -137,7 +137,7 @@ File: Components
   font-size: 16px;
   padding: 5px 8px;
   outline: none !important;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .btn-md {
   padding: 9px 18px;
@@ -569,7 +569,7 @@ File: Components
 .panel-title {
   font-weight: 700;
   margin: 0;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .panel-sub-title {
   color: rgba(255, 255, 255, 0.7) !important;
@@ -885,7 +885,7 @@ ul.nav-tabs {
   color: #0a2737;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 13px;
 }
 .nav-tabs > li > a:hover {
@@ -915,7 +915,7 @@ ul.nav-tabs {
   text-align: center;
   white-space: nowrap;
   font-weight: 600;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
 }
 .tabs-vertical-env .nav.tabs-vertical li.active > a {
@@ -1146,12 +1146,12 @@ ul.nav-tabs {
 }
 .jq-toast-single {
   border-radius: 0;
-  font-family: 'vugolight', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #969696;
   font-size: 14px;
 }
 .jq-toast-single h2 {
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .jq-toast-single a {
   font-size: 14px;
@@ -1213,7 +1213,7 @@ ul.nav-tabs {
 /* Sweet Alert */
 /* =========== */
 .swal2-modal {
-  font-family: 'vugolight', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .swal2-modal .swal2-title {
   font-size: 28px;
@@ -1427,7 +1427,7 @@ ul.nav-tabs {
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
 /* =============
@@ -1473,7 +1473,7 @@ ul.nav-tabs {
   border: none;
   padding: 8px 16px 8px 46px;
   background: #f1f6f6;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .custom-dd-empty .dd-list .dd3-content:hover {
   color: #43c5e6;
@@ -1538,12 +1538,12 @@ ul.nav-tabs {
 .fc-toolbar h2 {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 30px;
   text-transform: uppercase;
 }
 .fc-day-grid-event .fc-time {
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .fc-day {
   background: #ffffff;
@@ -1654,12 +1654,12 @@ ul.nav-tabs {
 .fc-basic-view td.fc-week-number span {
   padding-right: 8px;
   font-weight: 700;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .fc-basic-view td.fc-day-number {
   padding-right: 8px;
   font-weight: 700;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 /* =============
    Form
@@ -1668,7 +1668,7 @@ ul.nav-tabs {
 label {
   font-weight: 600;
   font-size: 14px;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .form-control {
   border: 1px solid #969696;
@@ -1989,7 +1989,7 @@ textarea.form-control {
   color: #969696;
   font-weight: 600;
   font-size: 12px;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .daterangepicker select.hourselect,
 .daterangepicker select.minuteselect,
@@ -2038,12 +2038,12 @@ textarea.form-control {
 .wizard > .steps a {
   font-size: 16px;
   text-align: center;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .wizard > .steps .number {
   font-size: 74px;
   line-height: 86px;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: absolute;
   left: 10px;
   top: -14px;
@@ -2202,7 +2202,7 @@ textarea.form-control {
   background-color: #43c5e6 !important;
 }
 .mce-window-head .mce-title {
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .mce-window {
   padding: 20px !important;
@@ -2232,7 +2232,7 @@ textarea.form-control {
   width: 19%;
 }
 th {
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-size: 13px;
   padding: 12px !important;
@@ -2286,7 +2286,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before
   background-color: #f7531f;
 }
 table.dataTable > tbody > tr.child span.dtr-title {
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 /* ColVid Tables */
 div.ColVis {
@@ -2502,7 +2502,7 @@ table.dataTable thead th.sorting_desc:after {
 .tablesaw thead tr:first-child th {
   font-weight: 600;
   border: none;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .tablesaw td {
   border-top: 1px solid rgba(241, 246, 246, 0.7) !important;
@@ -2760,7 +2760,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 .legend tr {
   height: 20px;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .legendLabel {
   padding-left: 5px !important;
@@ -2888,7 +2888,7 @@ table.dataTable thead th.sorting_desc:after {
 .c3-chart-arcs-title {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .c3-tooltip tr {
   border: none !important;
@@ -2898,7 +2898,7 @@ table.dataTable thead th.sorting_desc:after {
 }
 .c3-tooltip .value {
   font-weight: 600;
-  font-family: 'vugo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 /* Sparkline chart */
 .jqstooltip {
