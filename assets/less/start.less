@@ -11,7 +11,8 @@ body{
 	
 font-family: "Poppins", sans-serif;
 	
-	
+	font-size:14px;
+    color:@bodytext;
 }
 
 
@@ -1409,8 +1410,8 @@ display:block !important;
 	margin-right:15px;
 display:inline-block;
 white-space:normal;
-color:@darkgrey1;	
-
+color:@linkcolor;	
+font-weight:600;
 
 }
 
@@ -3806,10 +3807,10 @@ display:block;
  max-width:120px;
     position: relative;
     cursor: pointer;
-    padding: 10px 10px 0 0;
-    background: @white;
+  font-weight:500;
+   
     color: @btnblue;
-    border: solid 1px @btnblue;
+   
 }
 
 .like-btn:hover {
@@ -4072,13 +4073,121 @@ output{
 }
 article {
     .buttonlist {
-        .dropdown{
-            min-width:100px;
+        .dropdown {
+            min-width: 100px;
+
+
+
+            &:nth-child(1) {
+
+                .btn-toolbar:before {
+                    content: 'Importance'
+                }
+            }
+
+            &:nth-child(2) {
+
+                .btn-toolbar:before {
+                    content: 'Accuracy'
+                }
+            }
+
+            &:nth-child(3) {
+
+                .btn-toolbar:before {
+                    content: 'Positive Tone'
+                }
+            }
+
+            &:nth-child(4) {
+
+                .btn-toolbar:before {
+                    content: 'Relevance to me'
+                }
+            }
         }
+
         .btn-toolbar {
             margin-bottom: 0 !important;
-            padding-right:4px !important;
+            padding-right: 4px !important;
+            position: relative;
+
+
+            &:before {
+                display: flex;
+                color: #ffffff;
+                text-align: center;
+               left:0;
+                line-height: 17px;
+                font-size: .6em;
+               width:auto;
+                margin-left: auto;
+                margin-right: auto;
+               padding:5px;
+                background-color: rgba(0, 0, 0, 1);
+                border-radius: 20px;
+                position: absolute;
+                top: -15px;
+                font-size:11px;
+                opacity: 0;
+                text-transform: none !important;
+                letter-spacing: 0px !important;
+                transition: opacity .2s ease-in-out 0s;
+            }
+
+            &:hover {
+                transform:scale(1.2,1.2);
+                &:before {
+                    opacity: 1
+                }
+            }
         }
     }
 }
 
+
+
+
+
+.reaction-vulgar::before {
+    content: 'Vulgar'
+}
+
+.reaction-irrelevant::before {
+    content: 'Irrelevant'
+}
+
+.reaction-dislike::before {
+    content: 'Dislike'
+}
+
+.form-control{
+    border:solid 1px @lightborder;
+}
+
+
+.add-comment {
+    .authorimage {
+        object-fit: cover;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border:solid 10px @white;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    .img-circle {
+        border-radius: 50%;
+    }
+
+    .form-control{
+        flex:1 auto;
+    }
+
+    .reply-btn{
+
+        width:45px;
+    }
+}

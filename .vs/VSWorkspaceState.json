@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\less"
   ],
-  "SelectedNode": "\\new_design_tasks.html",
+  "SelectedNode": "\\assets\\css\\components.css",
   "PreviewInSolutionExplorer": false
 }

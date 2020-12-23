@@ -190,7 +190,7 @@
 
                                     <div class="facebook-reaction">
                                         <!-- container div for reaction system -->
-                                        <span class="like-btn btn ">
+                                        <span class="like-btn">
                                             <!-- Default like button -->
                                          
                                             <span class="like-btn-text">Abuse?</span> <!-- Default like button text,(Like, wow, sad..) default:Like  -->
@@ -207,7 +207,7 @@
                                             <span class="like-emo">
                                                 <!-- like emotions container -->
                                                 <span class="like-btn-dislike"></span> <!-- given emotions like, wow, sad (default:Like) -->
-                                            </span> <span class="like-details">Anna Notovska and 1k others</span>
+                                            </span> <span class="like-details">Anna Notovska and 1k reacted</span>
                                         </div>
                                     </div>
 
@@ -282,7 +282,7 @@
                                             <div class="buttonvalue" id="positivevalue"></div>
 
                                             <div class="dropdown-menu dropdown-slider">
-                                                <h5>Accuracy</h5>
+                                                <h5>Positive Tone</h5>
                                                 <input type="range" id="positive"
                                                        min="-2"
                                                        max="2"
@@ -297,7 +297,7 @@
 
                                             <div class="buttonvalue" id="relevancevalue"></div>
                                             <div class="dropdown-menu dropdown-slider">
-                                                <h5>Accuracy</h5>
+                                                <h5>Relevance to me</h5>
                                                 <input type="range" id="relevance"
                                                        min="-2"
                                                        max="2"
@@ -310,7 +310,13 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
+                                <div class="add-comment mt-2">
 
+                                    <a class="authorimage" href="#" data-toggle="dropdown" aria-expanded="true"><img src="images/john.png" class="img-circle" /></a>
+                                    <input type="text" class="form-control" /><a href="#" class="reply-btn" data-reply="private"><img src="images/icon_private2.svg" /></a>
+                                    <a href="#" class="reply-btn" data-reply="group"><img src="images/icon_group2.svg" /></a>
+                                    <a href="#" class="reply-btn" data-reply="public"><img src="images/icon_public2.svg" /></a>
+                                </div>
                                 <div class="comments">
                                     <div class="comment">
                                         <header>
@@ -813,13 +819,13 @@
 
 
             'use strict';
-            $(".like-emo").html('<span class="like-btn-hammer"></span><span class= "like-btn-dislike" ></span >');
+            $(".like-emo").html('<span class= "like-btn-dislike" ></span >');
             var a = 0;
             var b = 0;
             var c = 1;
             $(".reaction").on("click", function () {   // like click
                 var data_reaction = $(this).attr("data-reaction");
-                $(".like-details").html("You, Anna Notovska and 1k others");
+                $(".like-details").html("You, Anna Notovska and 1k reacted");
                
                 //$(".like-btn-emo").removeClass().addClass('like-btn-emo').addClass('like-btn-' + data_reaction.toLowerCase());
                // $(".like-btn-text").text(data_reaction).removeClass().addClass('like-btn-text').addClass('like-btn-text-' + data_reaction.toLowerCase()).addClass("active");
@@ -858,7 +864,7 @@
                     $(".like-btn-text").text("Like").removeClass().addClass('like-btn-text');
                     $(".like-btn-emo").removeClass().addClass('like-btn-emo').addClass("like-btn-default");
                     $(".like-emo").html('<span class="like-btn-vulgar"></span>');
-                    $(".like-details").html("Anna Notovska and 1k others");
+                    $(".like-details").html("Anna Notovska and 1k reacted");
 
                 }
             });  
