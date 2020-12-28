@@ -1106,7 +1106,9 @@ article, .comment, .friendslist {
         position: relative;
         margin-top: 5px;
         display:flex;
-        .authorimage {order:1;
+        .authorimage {
+            width:60px;
+            order:1;
             margin-right: 15px;
             float: left;
         }
@@ -3376,8 +3378,8 @@ input:-webkit-autofill {
 
 
         .authorimage {
-
-            img.img-circle {
+            width:60px;
+            img.img-circle {object-fit:cover;
                 border-radius: 50% !important;
             }
         }
@@ -4167,27 +4169,200 @@ article {
 
 
 .add-comment {
+    padding-bottom:5px;
+    border-bottom:solid 1px @lightborder;
     .authorimage {
-        object-fit: cover;
-        width: 52px;
-        height: 52px;
+        width: 62px;
         border-radius: 50%;
-        border:solid 10px @white;
+        border: solid 10px @white;
+        margin-bottom: 0px;
+
+        img {
+            object-fit: cover;
+        }
     }
 
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
+
     .img-circle {
         border-radius: 50%;
     }
 
-    .form-control{
-        flex:1 auto;
+    .form-control {
+        flex: 1 auto;
     }
 
-    .reply-btn{
+    .reply-btn {
+        width: 55px;
+        padding:2px;
+        &:nth-child(3) {
+           margin-left:4px;
+        }
 
-        width:45px;
+        &:nth-child(4) {
+            width: 65px;
+        }
+    }
+}
+
+.reply-btn {
+    position:relative;
+    display:inline-block;
+    margin-left:2px;
+    margin-right:2px;
+    height:38px;
+    border:solid 1px @lightborder;
+    border-radius:4px;
+    &::before {
+        display: flex;
+        color: #ffffff;
+        text-align: center;
+        left: 0;
+        line-height: 17px;
+        font-size: .6em;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 1);
+        border-radius: 20px;
+        position: absolute;
+        top: -15px;
+        font-size: 11px;
+        opacity: 1;
+        text-transform: none !important;
+        letter-spacing: 0px !important;
+        transition: opacity .2s ease-in-out 0s;
+    }
+
+    &:hover {
+      
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.reply-btn:before {
+ 
+    display: flex;
+    color: #ffffff;
+    text-align: center;
+    left: 0;
+    line-height: 17px;
+    font-size: .6em;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    position: absolute;
+    top: -25px;
+    font-size: 11px;
+    opacity: 0;
+    text-transform: none !important;
+    letter-spacing: 0px !important;
+    transition: opacity .2s ease-in-out 0s;
+}
+
+.reply-btn[data-reply="private"]{
+
+    &:before{
+
+        content:"Private";
+    }
+}
+
+.reply-btn[data-reply="public"] {
+
+    &:before {
+        content: "Public";
+    }
+}
+
+.reply-btn[data-reply="group"] {
+
+    &:before {
+        content: "Group";
+    }
+}
+
+.comments_section {
+
+    .comment_list > li {
+        margin-bottom: 4rem;
+    }
+
+   
+       
+   
+
+    .no_comment_found {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    
+  
+}
+
+
+.comment_card {
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+
+    .comment_options {
+        width: 100%;
+        flex: 1 0 100%;
+        margin-top:10px;
+        button {float:right;
+            margin-left: auto;
+
+            border:none;
+            background:transparent;
+            color:@btnblue;
+            font-size:13px;
+            font-weight:bold;
+        }
+    }
+
+    .comment_text {
+        padding: 10px;
+        background: transparent;
+        flex: 1 0 auto;
+        margin: 0;
+       
+        background: @lightgrey;
+        border-radius: 6px;
+
+        .date {
+            color: @greytext;
+            font-size: 12px;
+        }
+    }
+
+    h5 {margin-top:0;
+        margin-bottom:0;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .figure {
+        margin: 0;
+        display: flex;
+        flex: 0 0 40px;
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
     }
 }
