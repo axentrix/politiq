@@ -186,7 +186,7 @@ File: Responsive
     padding: 0;
   }
   footer {
-    padding-bottom: 60px !important;
+   
     position: relative !important;
   }
   footer .nav li::before {
@@ -258,9 +258,7 @@ File: Responsive
     padding: 0px !important;
     margin-top: 15px;
   }
-  .logo {
-    display: none;
-  }
+
   .creditbalance {
     padding: 15px 0 0 0px !important;
     float: right !important;
