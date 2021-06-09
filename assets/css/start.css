@@ -440,9 +440,10 @@
 }
 /* CSS Document */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "vugo", sans-serif;
   font-size: 14px;
   color: #43535b;
+  transition: all 0.2s;
 }
 .wrapper {
   position: relative;
@@ -461,11 +462,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "vugo", sans-serif;
   font-weight: bold;
 }
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "vugo", sans-serif;
   font-size: 30px;
 }
 ul {
@@ -490,7 +491,7 @@ input[type=radio]:not(old) + label {
   margin-bottom: 5px;
   margin-top: 5px !important;
   text-transform: none !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "vugo", sans-serif !important;
   /* text-indent:10px;*/
 }
 input[type=radio]:not(old) + label {
@@ -503,12 +504,12 @@ input[type=radio]:not(old) + label {
 input[type=radio]:not(old):checked + label {
   background: url('../../images/input-radio-checked.png') no-repeat 0 1px;
   text-transform: none !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "vugo", sans-serif !important;
 }
 input[type=checkbox]:not(old):checked + label {
   background: url('../../images/checks_checked.png') no-repeat 0 1px;
   text-transform: none !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "vugo", sans-serif !important;
 }
 input[type=checkbox]:not(old) + label {
   /*display      : inline-block;
@@ -540,7 +541,7 @@ input[type=checkbox]:not(old) + label {
   padding: 3px 5px;
   margin-top: 1px;
   background-color: #4acf95;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'vugo', sans-serif;
   border-radius: 100%;
 }
 .badge-xs {
@@ -599,7 +600,14 @@ input[type=checkbox]:not(old) + label {
   margin-right: 0px !important;
 }
 .navbar-right li {
-  display: inline-block;
+  display: inline-flex;
+}
+.navbar-right li a {
+  display: flex !important;
+  align-items: center;
+}
+.navbar-right li a img {
+  margin-right: 0.5em;
 }
 .navbar-right li a {
   font-family: 'Poppins', sans-serif;
@@ -643,12 +651,16 @@ input[type=checkbox]:not(old) + label {
   display: inline-block;
   padding: 9px 15px !important;
 }
+.user-box {
+  padding-right: 1.5em;
+}
 .navbar-right {
-  padding-right: 0px !important;
+  padding-right: 0 !important;
 }
 .user-box .user-img {
   height: 36px;
   width: 36px;
+  transition: all 0.5s;
 }
 .logo {
   /*padding-top:20px !important;	*/
@@ -714,9 +726,6 @@ li.search-mobil a {
   position: relative;
   display: block;
   margin-top: 16px;
-}
-.navbar-right li.user-box a {
-  padding-top: 17px !important;
 }
 .navbar-right li.login-box a {
   line-height: 70px;
@@ -1009,7 +1018,7 @@ a.politician .occupation {
 }
 a.politician .country {
   font-size: 14px;
-  color: #969696;
+  color: #9197a3;
   font-family: 'Poppins', sans-serif;
   display: block;
 }
@@ -1079,7 +1088,7 @@ span.closely {
   margin-bottom: 5px;
 }
 .events li {
-  border-bottom: solid 1px #969696;
+  border-bottom: solid 1px #9197a3;
 }
 .events li a {
   text-transform: uppercase;
@@ -1324,6 +1333,31 @@ article .buttonlist,
   display: flex;
   justify-content: space-between;
 }
+article .buttonlist button,
+.comment .buttonlist button,
+.friendslist .buttonlist button {
+  overflow: visible !important;
+  background: none;
+  padding: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+article .buttonlist button:active,
+.comment .buttonlist button:active,
+.friendslist .buttonlist button:active {
+  box-shadow: none !important;
+}
+article .buttonlist button:focus,
+.comment .buttonlist button:focus,
+.friendslist .buttonlist button:focus {
+  box-shadow: none !important;
+}
+article .buttonlist button:hover,
+.comment .buttonlist button:hover,
+.friendslist .buttonlist button:hover {
+  box-shadow: none !important;
+}
 article .buttonlist img,
 .comment .buttonlist img,
 .friendslist .buttonlist img {
@@ -1376,7 +1410,7 @@ article .buttonlist .icon-comment,
 article .date,
 .comment .date,
 .friendslist .date {
-  color: #969696;
+  color: #9197a3;
   font-size: 14px;
 }
 article .comments,
@@ -1458,7 +1492,7 @@ article .viewall:hover,
   transition: all .4s;
 }
 .navbar {
-  transition: all 1s;
+  transition: all 0.4s;
 }
 .navbar.active {
   transition: all 1s;
@@ -1522,8 +1556,8 @@ article .viewall:hover,
   margin-right: 15px;
   display: inline-block;
   white-space: normal;
-  color: #0a2737;
-  font-weight: 600;
+  color: #8e9ea7;
+  font-weight: 500;
 }
 .fullpost {
   color: #43c5e6;
@@ -1611,6 +1645,10 @@ article .viewall:hover,
   width: 100%;
   margin: 0;
   padding: 0;
+}
+#moodtoolbar a i {
+  font-size: 24px;
+  color: #46bcf2;
 }
 #moodtoolbar.active {
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
@@ -1845,7 +1883,7 @@ h4.handwritten {
   text-align: center;
 }
 #loginsection h1 {
-  font-family: "Poppins";
+  font-family: "vugo";
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 2px;
@@ -1865,6 +1903,9 @@ h4.handwritten {
   display: none;
   float: left;
 }
+.form-control {
+  font-family: "Poppins", sans-serif;
+}
 #loginsection input.form-control,
 #loginsection select,
 #loginsection .bfh-selectbox {
@@ -1873,7 +1914,7 @@ h4.handwritten {
   background: #ffffff;
   color: #000000;
   font-size: 16px;
-  font-family: "Poppins";
+  font-family: "vugo";
 }
 .loginroot {
   width: 100% !important;
@@ -2063,7 +2104,7 @@ input:-webkit-autofill:active {
   color: #0a2737 !important;
   text-transform: uppercase;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'vugo', sans-serif;
   font-size: 13px;
   padding-right: 20px !important;
   transition: all .2s;
@@ -2443,7 +2484,7 @@ ul.aflexbox li {
   font-weight: normal;
   display: block;
   font-size: 16px;
-  color: #8c9398;
+  color: #8e9ea7;
 }
 #votepopup .mainpolinfo {
   width: 100%;
@@ -2543,6 +2584,7 @@ ul.aflexbox li {
   border-radius: 6px;
   padding: 8px 5px 8px 5px !important;
   position: relative;
+  color: #8e9ea7 !important;
 }
 .tag .tagname {
   font-weight: bold;
@@ -2632,7 +2674,7 @@ ul.aflexbox li {
   margin-left: 5px;
 }
 .greylink {
-  color: #8c9398;
+  color: #8e9ea7;
 }
 .greylink img {
   width: 10px !important;
@@ -2712,14 +2754,14 @@ input:-webkit-autofill {
   z-index: 3;
 }
 .navbar-brand {
-  display: inline-block;
-  background: url(/images/svg-icons/logo.svg) 0 0 no-repeat;
+  display: inline-flex;
+  background: url(/images/svg-icons/logo.svg) 50% 50% no-repeat;
   background-size: contain;
   text-indent: -99999px;
   min-width: 100px;
   padding: 0px;
   flex: 0 0 100px;
-  margin-bottom: 5px;
+  margin: 0 0.5em !important;
 }
 #signupsection .form-group {
   display: flex;
@@ -3592,7 +3634,7 @@ output {
 }
 .post-rating.neutral {
   background: #f1f6f6;
-  color: #8c9398;
+  color: #8e9ea7;
 }
 article .buttonlist .dropdown {
   min-width: 100px;
@@ -3784,7 +3826,7 @@ article .buttonlist .btn-toolbar:hover:before {
   border-radius: 6px;
 }
 .comment_card .comment_text .date {
-  color: #8c9398;
+  color: #8e9ea7;
   font-size: 12px;
 }
 .comment_card h5 {
@@ -3860,8 +3902,15 @@ article .buttonlist .btn-toolbar:hover:before {
 }
 .navbar-expand-lg {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: unset !important;
+  align-items: unset !important;
+  min-height: 60px;
+}
+.navbar-expand-lg .user {
+  display: flex;
+}
+.navbar-expand-lg .user span {
+  margin-left: 0.5em;
 }
 @media (max-width: 991px) {
   .navbar-right li.user-box a {
@@ -3903,7 +3952,7 @@ footer .nav {
   }
   .footer .nav li a,
   footer .nav li span {
-    font-family: "Poppins", sans-serif;
+    font-family: "vugo", sans-serif;
     color: #fff;
     padding: 5px;
     font-weight: 400;
@@ -3969,7 +4018,7 @@ a:hover {
   display: none;
 }
 .comment_card .comment_edit input {
-  margin-left: 40px;
+  margin-left: 0.5em;
   flex: 1 auto;
 }
 .comment_card .comment_edit button {
@@ -3985,4 +4034,252 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex: 1 auto;
+}
+.pull-right {
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary {
+  background: #000000;
+  font-family: vugobold;
+  letter-spacing: 1px;
+}
+.user-box {
+  align-items: center;
+}
+.user-box input[type=checkbox]:not(old) + label,
+.user-box input[type=radio]:not(old) + label {
+  color: #8e9ea7;
+  font-weight: 400;
+  font-family: "Poppins" !important;
+  padding-left: unset !important;
+  background: unset !important;
+  line-height: unset !important;
+}
+.user-box.show {
+  background: #46bcf2;
+}
+.user-box.show > a {
+  color: white !important;
+}
+.navbar-right {
+  display: flex;
+  margin-bottom: 0;
+  margin-right: 0.5em !important;
+  padding: 0;
+}
+.navbar-right figure {
+  padding: 0;
+  margin-right: 0.5em;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0;
+}
+.anonymous {
+  background: #272D2D;
+}
+.anonymous h2 {
+  color: #ffffff;
+}
+.anonymous .events li {
+  border-bottom: solid 1px black;
+}
+.anonymous .right-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px black;
+}
+.anonymous .right-section .polscores {
+  border-bottom: solid 1px black;
+}
+.anonymous article .additional,
+.anonymous .comment .additional,
+.anonymous .friendslist .additional {
+  border-bottom: solid 1px #000000;
+  display: flex;
+  justify-content: space-between;
+}
+.anonymous .add-comment {
+  padding-bottom: 5px;
+  border-bottom: solid 1px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.anonymous .politiqbox .articleimage {
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.anonymous .politiqbox .articleimage:after {
+  content: url("../../images/anonymous.svg");
+  position: absolute;
+  max-width: 24px;
+}
+.anonymous .politiqbox .articleimage img {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.anonymous .add-comment .authorimage {
+  width: 36px;
+  border-radius: 50%;
+  border: solid 0px #8e9ea7;
+  margin-bottom: 0px;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.anonymous .add-comment .authorimage:after {
+  content: url("../../images/anonymous.svg");
+  position: absolute;
+  max-width: 24px;
+}
+.anonymous .add-comment .authorimage img {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.anonymous .post-rating.neutral {
+  background: #272D2D;
+  color: #8e9ea7;
+}
+.anonymous ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #8e9ea7;
+  opacity: 1;
+  /* Firefox */
+}
+.anonymous :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #8e9ea7;
+}
+.anonymous ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #8e9ea7;
+}
+.anonymous a {
+  color: #46bcf2;
+}
+.anonymous .posts-content {
+  background: #1D1F20;
+}
+.anonymous h4 {
+  color: #ffffff;
+}
+.anonymous a.politician .occupation {
+  color: #8e9ea7;
+}
+.anonymous .rightmenu {
+  background: #1D1F20;
+}
+.anonymous article header h2 a,
+.anonymous .comment header h2 a,
+.anonymous .friendslist header h2 a {
+  color: #ffffff;
+}
+.anonymous .form-control {
+  background-color: transparent;
+  color: #8e9ea7;
+}
+.anonymous .addtagsdiv {
+  background: #272D2D;
+}
+.anonymous .textareadiv {
+  background: transparent;
+}
+.anonymous .comment-card {
+  background: #1D1F20;
+}
+.anonymous article,
+.anonymous .comment,
+.anonymous .friendslist {
+  background: #1D1F20;
+}
+.anonymous .politiqbox {
+  background: #1D1F20;
+}
+.anonymous .navbar-brand {
+  display: inline-block;
+  background: url(../../images/logowhite.svg) 50% 50% no-repeat;
+  background-size: 100px;
+}
+.anonymous .navbar-default {
+  background: black;
+}
+.anonymous .navbar-default .nav li.mainlink a {
+  color: #ffffff !important;
+}
+.anonymous .navbar-default .nav li.mainlink a:hover {
+  color: #46bcf2 !important;
+}
+.anonymous .navbar-default .navbar-right li.dropdown > a {
+  color: #ffffff !important;
+}
+.anonymous .navbar-default .user figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.anonymous .navbar-default .user figure:after {
+  content: url("../../images/anonymous.svg");
+  position: absolute;
+}
+.anonymous .navbar-default .user img {
+  position: relative;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.anonymous .text {
+  color: #ffffff;
+}
+.anonymous .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #272D2D;
+  background-color: #46bcf2;
+}
+.anonymous .tag {
+  background: black;
+  border-radius: 6px;
+  padding: 8px 5px 8px 5px !important;
+  position: relative;
+  color: #8e9ea7 !important;
+}
+.anonymous .bootstrap-tagsinput {
+  display: flex;
+  align-items: center;
+}
+.anonymous .bootstrap-tagsinput input {
+  border-radius: 6px;
+  padding: 4px 5px 4px 5px !important;
+  background: black;
+  border: solid 1px #8e9ea7;
+}
+.anonymous .btn-primary {
+  background-color: #46bcf2;
+}
+.anonymous .btn-primary.focus,
+.anonymous .btn-primary:focus,
+.anonymous .btn-primary:hover {
+  color: #fff;
+  background-color: #0c56d0;
+}
+.bootstrap-tagsinput {
+  display: flex;
+  align-items: center;
+}
+.bootstrap-tagsinput input {
+  margin-left: 0.5em;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  padding: 4px 5px 4px 5px !important;
+  background: transparent;
+  border: solid 1px #8e9ea7;
 }

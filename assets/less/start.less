@@ -9,10 +9,11 @@
 
 body{
 	
-font-family: "Poppins", sans-serif;
+font-family: "vugo", sans-serif;
 	
 	font-size:14px;
     color:@bodytext;
+    transition:all 0.2s;
 }
 
 
@@ -32,14 +33,14 @@ body {
 
 h1, h2, h3, h4, h5, h6{
 	
-font-family:"Poppins", sans-serif;	
+font-family:"vugo", sans-serif;	
 font-weight:bold;
 	
 }
 
 h1{
 	
-font-family:"Poppins", sans-serif;
+font-family:"vugo", sans-serif;
 font-size:30px;
 	
 }
@@ -73,7 +74,7 @@ padding-bottom:0px !important;
    margin-top:5px !important;
    text-transform:none !important;
    
-   font-family:"Poppins", sans-serif !important;
+   font-family:"vugo", sans-serif !important;
  /* text-indent:10px;*/
 }
 
@@ -89,7 +90,7 @@ input[type=radio   ]:not(old) + label{
 input[type=radio]:not(old):checked + label{
   background   : url('../../images/input-radio-checked.png') no-repeat 0 1px;
     text-transform:none !important;
-	font-family:"Poppins", sans-serif !important;
+	font-family:"vugo", sans-serif !important;
 }
 
 
@@ -97,7 +98,7 @@ input[type=radio]:not(old):checked + label{
 input[type=checkbox]:not(old):checked + label{
   background   : url('../../images/checks_checked.png') no-repeat 0 1px;
     text-transform:none !important;
-	font-family:"Poppins", sans-serif !important;
+	font-family:"vugo", sans-serif !important;
 }
 
 
@@ -143,7 +144,7 @@ input[type=checkbox]:not(old) + label
   padding: 3px 5px;
   margin-top: 1px;
   background-color: #4acf95;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'vugo', sans-serif;
   border-radius:100%;
 }
 .badge-xs {
@@ -214,7 +215,16 @@ list-style:none;
 	
 	li{
 		
-	display:inline-block;	
+	display:inline-flex;
+    
+    a{
+
+        display:flex !important;
+        align-items:center;
+        img{
+            margin-right:0.5em;
+        }
+    }
 	}
 	
 }
@@ -271,10 +281,13 @@ border:solid 1px @default;
 display:inline-block;
 padding:9px 15px !important;
 }
+.user-box{
 
+    padding-right:1.5em;
+}
 .navbar-right{
 	
-padding-right:0px !important;	
+padding-right:0 !important;	
 }
 
 
@@ -282,6 +295,8 @@ padding-right:0px !important;
   
     height: 36px;
     width: 36px;
+
+    transition:all 0.5s;
     
 }
 
@@ -387,7 +402,7 @@ display:block;
 
 .navbar-right li.user-box a{
 	
-padding-top:17px !important;	
+
 
 }
 
@@ -1206,6 +1221,30 @@ article, .comment, .friendslist {
     }
 
     .buttonlist {
+
+        button{
+overflow:visible !important;
+            background:none;
+            padding:none;
+            border:none;
+            outline:none;
+            box-shadow:none;
+            &:active{
+                box-shadow:none !important;
+
+
+            }
+            &:focus{
+                box-shadow:none !important;
+
+
+            }
+            &:hover{
+                box-shadow:none !important;
+
+
+            }
+        }
         img{
             width:30px;
             height:30px;
@@ -1335,7 +1374,7 @@ border-radius:0px;
 
 .navbar{
 	
-	transition:all 1s;
+	transition:all 0.4s;
 }
 
 .navbar.active{
@@ -1419,8 +1458,8 @@ display:block !important;
 	margin-right:15px;
 display:inline-block;
 white-space:normal;
-color:@linkcolor;	
-font-weight:600;
+color:@greytext;	
+font-weight:500;
 
 }
 
@@ -1545,7 +1584,16 @@ margin:0;
 padding:0;	
 	
 }
+#moodtoolbar{
 
+    a{
+
+        i{
+            font-size:24px;
+            color:@base-color;
+        }
+    }
+}
 #moodtoolbar.active{
 	box-shadow:@menushadow;
 	width:100%;
@@ -1858,7 +1906,7 @@ background:@base-color;
 
 
 #loginsection h1{
-	font-family:"Poppins";
+	font-family:"vugo";
     font-weight:bold;
 	font-size:30px;
 	letter-spacing:2px;
@@ -1889,6 +1937,11 @@ float:left;
 
 }
 
+.form-control{
+
+        font-family:"Poppins", sans-serif;
+}
+
 #loginsection input.form-control,
 
 #loginsection select,
@@ -1902,7 +1955,7 @@ background:#ffffff;
 color:#000000;
 font-size:16px;
 	
-	font-family:"Poppins";
+	font-family:"vugo";
 }
 
 
@@ -2191,7 +2244,7 @@ line-height:16px;
 		color: @primary !important;
     text-transform: uppercase;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'vugo', sans-serif;
     font-size: 13px;
 	
    
@@ -2808,6 +2861,7 @@ background:url("../../images/close.svg") 0 0 no-repeat;
     border-radius: 6px;
     padding: 8px 5px 8px 5px !important;
     position: relative;
+    color:@greytext !important;
 
     .tagname {
         font-weight: bold;
@@ -3016,15 +3070,15 @@ input:-webkit-autofill {
 }
 
 .navbar-brand {
-    display: inline-block;
-    background: url(/images/svg-icons/logo.svg) 0 0 no-repeat;
+    display: inline-flex;
+    background: url(/images/svg-icons/logo.svg) 50% 50% no-repeat;
     background-size: contain;
     text-indent: -99999px;
     min-width: 100px;
   padding:0px;
   flex:0 0 100px;
   
-    margin-bottom: 5px;
+   margin:0 0.5em !important
 }
 
 #signupsection .form-group {
@@ -4444,8 +4498,17 @@ article {
 
 .navbar-expand-lg{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
+    justify-content:unset !important;
+    align-items:unset !important;
+min-height:60px;
+    .user{
+        display:flex;
+
+        span{
+
+            margin-left:0.5em;
+        }
+    }
 }
 
 @media (max-width:991px){
@@ -4511,7 +4574,7 @@ footer .nav li {
 }
 
     .footer .nav li a, footer .nav li span {
-        font-family: "Poppins",sans-serif;
+        font-family: "vugo",sans-serif;
         color: #fff;
         padding: 5px;
         font-weight: 400;
@@ -4604,7 +4667,7 @@ a:hover {
         }
 
         input {
-            margin-left: 40px;
+            margin-left:0.5em;
             flex: 1 auto;
         }
 
@@ -4625,3 +4688,321 @@ a:hover {
         }
     }
 }
+
+.pull-right{
+
+    margin-right:auto;
+    display:inline-flex;
+    align-items:center;
+}
+
+.btn-primary{
+
+    background:@black;
+    font-family:vugobold;
+    letter-spacing:1px;
+}
+
+.user-box {
+align-items:center;
+input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label{
+
+        color:@greytext;
+        font-weight:400;
+        font-family:"Poppins" !important;
+        padding-left: unset !important;
+        background: unset !important;
+        line-height: unset !important;
+    }
+
+
+    &.show{
+
+        background:@base-color;
+
+
+        >a{
+
+
+            color:white !important;
+        }
+    }
+}
+
+.navbar-right{
+display:flex;
+    margin-bottom:0;
+    margin-right:0.5em !important;
+    padding:0;
+
+    figure{
+
+        padding:0;
+        margin-right:0.5em;
+        width:36px;
+        height:36px;
+        overflow:hidden;
+        border-radius:50%;
+        margin:0;
+    }
+}
+
+.anonymous{
+h2{
+
+    color:@white;
+}
+    .events li {
+        border-bottom: solid 1px black;
+    }
+.right-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px black;
+}
+    .right-section .polscores{
+
+        border-bottom:solid 1px black;
+    }
+    article .additional, .comment .additional, .friendslist .additional {
+        border-bottom: solid 1px @black;
+        display: flex;
+        justify-content: space-between;
+    }
+    .add-comment {
+        padding-bottom: 5px;
+        border-bottom: solid 1px @black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .politiqbox .articleimage{
+        overflow:hidden;
+        position:relative;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:8px;
+        &:after{
+            content:url("../../images/anonymous.svg");
+            position:absolute;
+            max-width:24px;
+            
+                        }
+                img{
+        
+                    filter: blur(8px);
+                    -webkit-filter: blur(8px);
+                }
+
+    }
+    .add-comment .authorimage {
+        width: 36px;
+        border-radius: 50%;
+        border: solid 0px @greytext;
+        margin-bottom: 0px;
+overflow:hidden;
+position:relative;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+&:after{
+    content:url("../../images/anonymous.svg");
+    position:absolute;
+    max-width:24px;
+    
+                }
+        img{
+
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+    }
+    .post-rating.neutral {
+        background: #272D2D;
+        color: @greytext;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: @greytext;
+        opacity: 1; /* Firefox */
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: @greytext;
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: @greytext;
+      }
+
+a{
+
+    color:@base-color;
+}
+    background:#272D2D;
+
+.posts-content{
+
+    background:#1D1F20;
+
+}
+h4{
+
+    color:@white;
+}
+a.politician .occupation{
+
+    color:@greytext;
+}
+.rightmenu{
+    background:#1D1F20;
+
+
+}
+article header h2 a, .comment header h2 a, .friendslist header h2 a{
+
+    color:@white;
+}
+
+.form-control{
+
+background-color:transparent;
+color:@greytext;
+}
+
+.addtagsdiv{
+    background:#272D2D;
+}
+.textareadiv{
+
+    background:transparent;
+}
+
+.comment-card{
+
+    background:#1D1F20;
+
+}
+article, .comment, .friendslist{
+
+    background:#1D1F20;
+
+}
+.politiqbox{
+
+    background:#1D1F20;
+}
+
+    .navbar-brand {
+        display: inline-block;
+        background: url(../../images/logowhite.svg) 50% 50% no-repeat;
+background-size:100px;
+
+
+    }
+.navbar-default{
+    .nav li.mainlink a{
+
+        color:@white !important;
+
+        &:hover{
+
+            color:@base-color !important; 
+        }
+    }
+
+
+    
+    background:black;
+
+    .navbar-right li.dropdown > a{
+        color:@white !important;
+    }
+
+
+   
+    .user{
+figure{
+
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    &:after{
+        content:url("../../images/anonymous.svg");
+        position:absolute;
+        
+        
+                    }
+}
+        img{
+
+position:relative;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+
+
+        }
+    }
+}
+.text{
+
+    color:@white;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #272D2D;
+    background-color: @base-color;
+}
+
+
+.tag {
+    background: black;
+    border-radius: 6px;
+    padding: 8px 5px 8px 5px !important;
+    position: relative;
+    color: @greytext !important;
+}
+
+.bootstrap-tagsinput{
+display:flex;
+align-items:center;
+
+    input{
+        border-radius: 6px;
+        padding: 4px 5px 4px 5px !important;
+        background: black;
+        border:solid 1px @greytext;
+
+    }
+}
+
+.btn-primary{
+    background-color: @base-color;
+
+}
+
+.btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+    color: #fff;
+    background-color: #0c56d0;
+}
+
+}
+
+
+.bootstrap-tagsinput{
+    display:flex;
+    align-items:center;
+    
+        input{margin-left:0.5em;
+            font-family:"Poppins", sans-serif;
+            border-radius: 6px;
+            padding: 4px 5px 4px 5px !important;
+            background: transparent;
+            border:solid 1px @greytext;
+    
+        }
+    }
