@@ -434,3 +434,117 @@
 .mx-n1 {
   margin-left: -0.25rem !important;
 }
+/*new*/
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptserif/v12/EJRVQgYoZZY2vCFuvDFR.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptserif/v12/EJRSQgYoZZY2vCFuvAnt65qV.ttf) format('truetype');
+}
+button {
+  outline: none;
+}
+.btn {
+  border-radius: 4px;
+  padding: 12px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 200px;
+  position: relative;
+}
+.btn span {
+  right: 10px;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+.btn-info {
+  background: transparent !important;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  transition: all 0.6s;
+}
+.btn-info:hover {
+  color: #014980;
+  border: solid 1px #014980;
+}
+.btn-primary {
+  border: none;
+  color: #ffffff;
+  background: #258fff;
+}
+.btn-primary:hover {
+  color: #ffffff;
+  background: #0075f1;
+}
+.btn-contact {
+  min-width: 300px;
+  border: none;
+  color: #ffffff;
+  background: #06284e;
+}
+.btn-contact:hover {
+  color: #ffffff;
+  background: #0075f1;
+}
+.btn-primary-white {
+  border: none;
+  color: #258fff;
+  background: #ffffff;
+}
+.btn-primary-white:hover {
+  color: #258fff;
+  background: #a2e4f2;
+}
+.btn-secondary {
+  display: block;
+  padding: 11px 14px;
+  margin: 0px;
+  border: none;
+  color: #ffffff;
+  background: #f1f4f9 !important;
+}
+.d-column {
+  flex-direction: column;
+}
