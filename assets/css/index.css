@@ -615,28 +615,7 @@ body {
   background: transparent center no-repeat;
   background-size: cover;
 }
-nav {
-  background-color: rgba(255, 255, 255, 0.9);
-  top: -150px;
-  position: absolute;
-  /* hold tight... */
-  /* we'll override these shortly */
-  z-index: 1000 !important;
-  width: 100%;
-}
-nav ul {
-  margin-right: 20px;
-  list-style: none;
-}
-nav li {
-  float: left;
-  display: inline-block;
-  color: #0a2737;
-  padding: 0 10px;
-}
-nav li:last-child {
-  border: 0;
-}
+
 #content {
   height: 1000px;
 }
@@ -923,22 +902,24 @@ section {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   border: 0;
   background: #f1f6f6;
-  padding: 10px;
+  padding: 0px;
   display: flex;
   overflow: visible;
   margin: 10px;
-  height: 270px;
+  min-height: 320px;
 }
+
+
 .card .polthumb {
-  width: 85px;
-  height: 85px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  width: 105px;
+  height: 105px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .card .polthumb img {
   object-fit: cover;
-  width: 85px;
-  height: 85px;
+  width: 105px;
+  height: 105px;
 }
 .card h4 {
   margin-top: 0px;
@@ -990,6 +971,12 @@ section {
 }
 .fill_pink {
   background: #dd4965 !important;
+}
+
+.ability, .vision{
+  flex:1;
+  margin-left:3px;
+  margin-right:3px;
 }
 #newsection {
   min-height: 100px;
@@ -1058,16 +1045,33 @@ section {
   font-weight: bold;
 }
 .mainpolinfo {
+  margin-top:5px;
+  padding:5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.carousel .card .card-header{
+  background:transparent;
+  background: #f6f6f6;
+  padding:5px;
+  display:flex;
+  align-items:center;
+}
+.carousel .card .card-header .articletitle .author{
+  font-size:12px;
+}
+.carousel .card .comment{
+padding-top:5px;
+  border-top: solid 1px #d3e0e6;
+}
 .mainpolinfo .date {
   color: #afb6b9;
-  padding-top: 4px;
+  padding-top: 0px;
   padding-bottom: 4px;
-  border-top: solid 1px #d3e0e6;
-  border-bottom: solid 1px #d3e0e6;
+
+
   flex: 1 100%;
   font-style: italic;
   display: flex;
@@ -1077,10 +1081,12 @@ section {
   display: inline-block;
   font-size: 13px;
   text-align: right;
+  margin-right:10px;
 }
 .mainpolinfo .polscores {
   flex: 1;
   display: inline-block;
+  padding:0 5px;
 }
 .mainpolinfo .polthumb {
   margin-top: 0;
