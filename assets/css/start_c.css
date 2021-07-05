@@ -601,6 +601,7 @@ header .header-section.aos-animate {
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 0 0 0.875rem 0 rgba(0, 0, 0, 0.2);
 }
 header .header-section.aos-animate .navbar {
   padding: 0;

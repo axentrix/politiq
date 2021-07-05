@@ -287,7 +287,7 @@
                             <div class="carousel-inner row w-100 mx-auto" role="listbox">
 
 
-                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 active">
+                                <div class="carousel-item col-12 col-sm-6 col-md-3 col-lg-4 active">
                                     <div class="card">
 
                                         <div class="card-header  d-flex">
@@ -342,7 +342,7 @@
 
                                     </div>
                                 </div>
-                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 active">
+                                <div class="carousel-item col-12 col-sm-6 col-md-3 col-lg-4">
                                 <div class="card">
 
                                     <div class="card-header  d-flex  ">
@@ -398,7 +398,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 active">
+                            <div class="carousel-item col-12 col-sm-6 col-md-3 col-lg-4">
                             <div class="card">
 
                                 <div class="card-header  d-flex  ">
@@ -454,7 +454,7 @@
                             </div>
                         </div>
 
-                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 active">
+                        <div class="carousel-item col-12 col-sm-6 col-md-3 col-lg-4 ">
                         <div class="card">
 
                             <div class="card-header  d-flex  ">
@@ -510,7 +510,7 @@
                         </div>
                     </div>
 
-                    <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4 active">
+                    <div class="carousel-item col-12 col-sm-6 col-md-3 col-lg-4 ">
                     <div class="card">
 
                         <div class="card-header  d-flex  ">
@@ -566,6 +566,7 @@
                     </div>
                 </div>
                             </div>
+                          
                             
                         </div>
 
@@ -693,10 +694,10 @@
         <div class="col-md-8">  <h5 >Global but Intimate</h5>
         <p>Talking politics with strangers may not be for you. The site let's you talk more intimately to friends and followers.</p>
     </div>  </div>
-    <div class="row icontext d-flex align-items-start">
+    <div class="row icontext d-flex align-items-start mt-4">
    
 
-        <div class="col-md-3">
+        <div class="col-md-3 ">
             <img src="images/homepage/newicon3.png"  /></div>
         <div class="col-md-8">  <h5>Integrated Political Data</h5>
         <p>Your politicians, government officials, elections and their candidates will all be natively integrated into the site. They're automatically a part of the experience.</p>
@@ -928,38 +929,23 @@
 
 
 
-        
-
+           
 
 
 
 
 
             var thecarousel = $(".carousel");
-            thecarousel.each(function (index) {
-
-                thecarousel.carousel();
-
-
-                $(this).swipe({
-                    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                        if (direction == 'left') $(this).carousel('next');
-                        if (direction == 'right') $(this).carousel('prev');
-                    },
-                    allowPageScroll: "vertical"
-                });
-
-
-
-            });
-
+          
             $('#carousel-example').on('slide.bs.carousel', function (e) {
                 /*
                     CC 2.0 License Iatek LLC 2018 - Attribution required
                 */
+
+             
                 var $e = $(e.relatedTarget);
                 var idx = $e.index();
-                var itemsPerSlide = 5;
+                var itemsPerSlide = 3;
                 var totalItems = $('#carousel-example').find('.carousel-item').length;
                 console.log("totalitems " + totalItems);
                 if (idx >= totalItems - (itemsPerSlide - 1)) {
